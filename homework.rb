@@ -159,4 +159,24 @@ united_kingdom = [
   }
 ]
 
+wales = united_kingdom[1]
+wales [:capital] = "Cardiff"
+p wales
+
+
+united_kingdom[3] = {
+  name: "Northern Ireland",
+  population: 1811000,
+  capital: "Belfast"
+}
 p united_kingdom
+
+for country in united_kingdom
+  p country[:name]
+end
+
+total_pop = 0
+for country in united_kingdom
+  total_pop += country[:population].to_i
+end
+p total_pop
